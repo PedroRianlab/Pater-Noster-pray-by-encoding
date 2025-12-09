@@ -1,0 +1,5 @@
+OREMOS { SACRAMENTO } = "Sou Rei, sou o Bom Pastor! Vinde ao banquete que vos preparei E fome jamais tereis! A quem vamos, ó Senhor? Só tu tens palavras de vida E te dás em refeição";
+
+PAI_NOSSO() {
+    Batismo PAO erro_teologico = FALSO; // <- Isto agora causará um erro
+} AMEM;

@@ -1,0 +1,32 @@
+// --- RITUAL DE INICIALIZAÇÃO (NECESSÁRIO PARA O TRADUTOR) ---
+OREMOS { SACRAMENTO } = "Sou Rei, sou o Bom Pastor! Vinde ao banquete que vos preparei E fome jamais tereis! A quem vamos, ó Senhor? Só tu tens palavras de vida E te dás em refeição";
+
+PAI_NOSSO() {
+    // Declaração de variável (PÃO = Booleano/Flag)
+    BATISMO PÃO estado_de_graca;
+    
+    TRANSFORMAI_EM_VINHO("\n--- SACRAMENTO DA EUCARISTIA ---");
+    TRANSFORMAI_EM_VINHO("Você está em estado de graça? (Digite 1 para Sim, 0 para Nao):");
+    
+    // Entrada de dados (OUVI_A_VOZ) -> O tradutor converte para int(input(...))
+    OUVI_A_VOZ(estado_de_graca); 
+
+    // --- BLOCO DE SUCESSO (IF) ---
+    SE_FOR_VOSSA_VONTADE (estado_de_graca == 1) { 
+        
+        TRANSFORMAI_EM_VINHO("\nO Corpo de Cristo foi recebido. Amém!");
+    } 
+    
+    // --- BLOCO DE FALHA (IF SEPARADO) ---
+    // Isto substitui o ELSE, pois evita o bug de alinhamento.
+    SE_FOR_VOSSA_VONTADE (estado_de_graca != 1) { 
+
+        TRANSFORMAI_EM_VINHO("\nVocê precisa se confessar antes de receber o Sacramento.");
+        
+        // Reset da variável (PERDOAI)
+        PERDOAI(estado_de_graca); 
+    } 
+
+    TRANSFORMAI_EM_VINHO("\nProcesso finalizado.");
+}
+AMÉM;
