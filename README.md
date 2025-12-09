@@ -2,6 +2,13 @@
 
 Guia rápido da linguagem esotérica e do tradutor Sacerdos.
 
+## Sumário rápido
+
+- Guia geral: este README ensina como rodar, traz comandos essenciais os EXEMPLOS obrigatórios.
+- Documentação da linguagem: veja `DOCUMENTAÇÃO.md` para gramática completa, tokens e regras especiais.
+- Documentação da liturgia: veja `DOCUMENTAÇÃO_LITÚRGICA.md` para o contexto devocional e orações de referência.
+- Exemplo 99 Hóstias: adaptação do clássico 99 garrafas de cerveja; o exercício foi renomeado para 99 hóstias.
+
 ## Como rodar
 
 1. Salve o código com extensão `.pn`.
@@ -80,6 +87,8 @@ AMÉM;
 ```
 
 ## Exemplo Obrigatório: 02 (99 Hóstias (adaptação do 99 garrafas de cerveja))
+
+Nota: o exercício 99 garrafas de cerveja foi renomeado para 99 hóstias.
 
 ```pn
 // --- ORAÇÕES INICIATÓRIAS ---
