@@ -150,6 +150,15 @@ PAI_NOSSO() {
 AMÉM;
 ```
 
+## Equipe:
+
+Luiz Miguel Rodrigues de Souza - 565930
+Alex de Sousa Alves - 558446
+Iuri Vale Macedo Rocha - 567021
+Pedro Rian Martins Fialho - 554275
+Danilo Victor Pacheco - 555394
+Marcio Gabriel Teles de Macêdo - 563656
+
 # Inspirações
 
 ## 🎵 “Estás entre nós” — Criação da biblioteca **Fé**, laços de repetição, incremento, decremento
