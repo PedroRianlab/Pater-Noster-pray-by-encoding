@@ -170,6 +170,7 @@ def translate_pater_noster_to_python(pater_noster_code):
             
             cleaned_line = cleaned_line.replace("VERDADEIRO", "True").replace("FALSO", "False")
             cleaned_line = re.sub(r'(ÁGUA|VINHO|PÃO)', '', cleaned_line).strip() 
+            cleaned_line = re.sub(r'\bVENHA_A_(?:T[ÉE]_)?N[ÓO]S\s+', '', cleaned_line)
             
             validar_tipo_pao(cleaned_line)
             python_code.append(f"{current_indent}{cleaned_line}")
