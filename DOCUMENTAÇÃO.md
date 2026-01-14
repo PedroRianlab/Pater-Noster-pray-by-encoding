@@ -1,6 +1,6 @@
 # pater-noster-pray-in-code — Guia completo de sintaxe
 
-Linguagem esotérica onde cada construção é inspirada em símbolos litúrgicos. Este guia reflete o comportamento real do tradutor `sacerdos_translator.py` (versão estável corrigida).
+Linguagem esotérica onde cada construção é inspirada em símbolos litúrgicos. Este guia reflete o comportamento real do tradutor `sacerdos_translator.py`.
 
 ## 1) Oração iniciatória obrigatória (copie literalmente)
 

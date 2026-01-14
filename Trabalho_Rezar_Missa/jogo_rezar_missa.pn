@@ -1,0 +1,817 @@
+OREMOS { SACRAMENTO } = "Sou Rei, sou o Bom Pastor! Vinde ao banquete que vos preparei E fome jamais tereis! A quem vamos, ó Senhor? Só tu tens palavras de vida E te dás em refeição";
+
+PAI_NOSSO() {
+  BATISMO ÁGUA pontuacao = 0;
+  BATISMO ÁGUA posicao_atual = 0;
+  BATISMO ÁGUA escolha = 0;
+  BATISMO ÁGUA acao_correta = 0;
+  BATISMO ÁGUA jogando = 1;
+  BATISMO ÁGUA entrada_invalida = 0;
+
+  TRANSFORMAI_EM_VINHO("\n\n");
+  TRANSFORMAI_EM_VINHO("  ===================================================");
+  TRANSFORMAI_EM_VINHO("              JOGO DA MISSA SAGRADA");
+  TRANSFORMAI_EM_VINHO("  ===================================================");
+  TRANSFORMAI_EM_VINHO("");
+  TRANSFORMAI_EM_VINHO("                        +");
+  TRANSFORMAI_EM_VINHO("                       +++");
+  TRANSFORMAI_EM_VINHO("                        +");
+  TRANSFORMAI_EM_VINHO("                     +++++++");
+  TRANSFORMAI_EM_VINHO("                        +");
+  TRANSFORMAI_EM_VINHO("                        +");
+  TRANSFORMAI_EM_VINHO("                        +");
+  TRANSFORMAI_EM_VINHO("\n");
+  TRANSFORMAI_EM_VINHO("========== BEM-VINDO AO JOGO DA SANTA MISSA ==========");
+  TRANSFORMAI_EM_VINHO("Você está na plateia acompanhando a celebração sagrada.");
+  TRANSFORMAI_EM_VINHO("Siga os movimentos e as orações com reverência!");
+  TRANSFORMAI_EM_VINHO("Faça as escolhas corretas em cada momento da missa!");
+  TRANSFORMAI_EM_VINHO("======================================================\n");
+
+  TRANSFORMAI_EM_VINHO("\n********** PARTE 1: RITOS INICIAIS **********\n");
+
+  TRANSFORMAI_EM_VINHO("\n--- Entrada: Canto de entrada e procissão ---");
+  TRANSFORMAI_EM_VINHO("O sacerdote e os ministros entram em procissão enquanto cantamos ou ouvimos o cântico de entrada.");
+  TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+  TRANSFORMAI_EM_VINHO("1 - Levantar e acompanhar a procissão");
+  TRANSFORMAI_EM_VINHO("2 - Sentar");
+  TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+  TRANSFORMAI_EM_VINHO("4 - Cantar o cântico");
+  TRANSFORMAI_EM_VINHO("5 - Deixar a mente vagar em preocupações mundanas");
+  TRANSFORMAI_EM_VINHO("Sua escolha: ");
+  entrada_invalida = 1;
+  ENQUANTO_EU_VIVERES_E_ATE_QUANDO_TU_QUISERES(entrada_invalida != 0) {
+    OUVI_A_VOZ(escolha);
+    SE_FOR_VOSSA_VONTADE (escolha >= 1) {
+      SE_FOR_VOSSA_VONTADE (escolha <= 5) {
+        PERDOAI(entrada_invalida);
+      }
+      SE_NAO_FOR_VOSSA_VONTADE (escolha <= 5) {
+        TRANSFORMAI_EM_VINHO("⚠ Digite um número de 1 a 5!");
+      }
+    }
+    SE_NAO_FOR_VOSSA_VONTADE (escolha >= 1) {
+      TRANSFORMAI_EM_VINHO("⚠ Digite um número de 1 a 5!");
+    }
+  }
+  acao_correta = 1;
+  SE_FOR_VOSSA_VONTADE (escolha == 5) {
+    TRANSFORMAI_EM_VINHO("\n✗ Sua mente se fechou ao momento sagrado. Enquanto a procissão avançava em reverência, você permaneceu interiormente ausente.");
+    TRANSFORMAI_EM_VINHO("A desatenção voluntária criou uma barreira entre você e o Mistério que se iniciava.");
+    TRANSFORMAI_EM_VINHO("Fim de jogo.");
+    PERDOAI(jogando);
+  }
+  SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+    SE_FOR_VOSSA_VONTADE (jogando != 0) {
+      TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se levantou com reverência para a entrada!");
+      pontuacao += 1;
+      posicao_atual = 1;
+    }
+  }
+  SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+    SE_FOR_VOSSA_VONTADE (jogando != 0) {
+      TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era LEVANTAR.");
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Saudação e Sinal da Cruz ---");
+    TRANSFORMAI_EM_VINHO("O sacerdote faz o sinal da cruz e saúda o povo. Responda: 'E com o vosso espírito'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Responder");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Responder");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Fechar-se interiormente ao diálogo com Deus");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Seu coração se fechou ao chamado de Deus. A soberba silenciosa impediu que você reconhecesse sua necessidade de perdão.");
+      TRANSFORMAI_EM_VINHO("Sem abertura para a reconciliação, você não pôde receber as graças que a Missa oferecia.");
+      TRANSFORMAI_EM_VINHO("Fim de jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu em pé com disposição de conversão!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar EM PÉ.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Ato Penitencial (Confiteor) ---");
+    TRANSFORMAI_EM_VINHO("Reconhecimento e pedido de perdão pelos pecados. Recite: 'Eu confesso a Deus todo-poderoso...'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Recitar");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Recitar");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Reter mágoa e recusa de perdoar a alguém presente");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ O ressentimento endureceu seu coração. Ao recusar perdoar, você impediu que a Graça tocasse a raiz da sua alma.");
+      TRANSFORMAI_EM_VINHO("A Missa não pode sanctificar quem segue agarrado à recordação da injúria, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu em pé!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar EM PÉ.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Glória ---");
+    TRANSFORMAI_EM_VINHO("Hino de louvor à Santíssima Trindade. Cante/Recite: 'Glória a Deus nas alturas...'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Cantar");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Cantar");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Deixar a vaidade controlar seus pensamentos durante o louvor");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Enquanto cantava o Glória, seu coração se voltou para si mesmo. A vaidade roubou a sinceridade da sua adoração.");
+      TRANSFORMAI_EM_VINHO("Você louvou a Deus, mas pensava em si. A desconexão espiritual se aprofundou, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu em pé!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar EM PÉ.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Oração da Coleta ---");
+    TRANSFORMAI_EM_VINHO("O sacerdote faz a oração que introduz a liturgia do dia. Responda ao final: 'Amém'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Responder Amém");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Responder Amém");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Julgar silenciosamente a oração dos outros à sua volta");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Enquanto deveria responder a Deus, você criticava seus irmãos. O julgamento crítico ocupou o lugar da caridade.");
+      TRANSFORMAI_EM_VINHO("A comunidade se fragmentou em seu coração, e você ficou apartado do Corpo de Cristo, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu em pé!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar EM PÉ.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n\n********** PARTE 2: LITURGIA DA PALAVRA **********\n");
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Primeira Leitura (Antigo Testamento) ---");
+    TRANSFORMAI_EM_VINHO("O leitor proclama a Palavra de Deus. Ao final responda: 'Graças a Deus'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    TRANSFORMAI_EM_VINHO("1 - Levantar e se distrair");
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 2) {
+      TRANSFORMAI_EM_VINHO("2 - Continuar Sentado e Responder Graças a Deus");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 2) {
+      TRANSFORMAI_EM_VINHO("2 - Sentar e Responder Graças a Deus");
+    }
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Você se recusa a ouvir pois já conhece a leitura");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 2;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Por soberba, ao se recusar a ouvir, por julgar que já conhecia a leitura, você fechou o coração para o que Deus queria dizer hoje.");
+      TRANSFORMAI_EM_VINHO("A Palavra não se repete, quem se fecha é quem a escuta. Você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se sentou para ouvir a Palavra!");
+        pontuacao += 1;
+        posicao_atual = 2;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era SENTAR.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Salmo Responsorial ---");
+    TRANSFORMAI_EM_VINHO("Resposta cantada ou rezada ao salmo. Responda o refrão junto com o cantor/leitor.");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    TRANSFORMAI_EM_VINHO("1 - Levantar");
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 2) {
+      TRANSFORMAI_EM_VINHO("2 - Continuar Sentado e Responder o Refrão");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 2) {
+      TRANSFORMAI_EM_VINHO("2 - Sentar e Responder o Refrão");
+    }
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Questionar silenciosamente a verdade que está sendo proclamada");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 2;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Enquanto a Palavra de Deus ecoava, seu espírito permaneceu fechado em desconfiança. O orgulho da razão impediu que você ouvisse com fé.");
+      TRANSFORMAI_EM_VINHO("Sem abertura ao Evangelho, a Semente não pôde germinar em seu coração, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu sentado!");
+        pontuacao += 1;
+        posicao_atual = 2;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar SENTADO.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Segunda Leitura (Novo Testamento) ---");
+    TRANSFORMAI_EM_VINHO("Leitura das cartas apostólicas. Ao final responda: 'Graças a Deus'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    TRANSFORMAI_EM_VINHO("1 - Levantar");
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 2) {
+      TRANSFORMAI_EM_VINHO("2 - Continuar Sentado e Responder");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 2) {
+      TRANSFORMAI_EM_VINHO("2 - Sentar e Responder");
+    }
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Deixar a mente divagar em coisas materiais que deseja");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 2;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Enquanto a Palavra era proclamada, seus pensamentos se prenderem ao que você ambiciona. A cobiça distraiu seu coração da verdade eterna.");
+      TRANSFORMAI_EM_VINHO("Você ouviu com os ouvidos, mas não com o espírito, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu sentado!");
+        pontuacao += 1;
+        posicao_atual = 2;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar SENTADO.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Aclamação ao Evangelho (Aleluia) ---");
+    TRANSFORMAI_EM_VINHO("Canto que precede o Evangelho. Responda: 'Aleluia, Aleluia, Aleluia!'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Responder Aleluia");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Responder Aleluia");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Bolsa de dinheiro esquecida no chão");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Você saiu para ficar com o dinheiro encontrado e perdeu a missa. A cobiça te afastou do pão celeste, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se levantou para o Aleluia!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era LEVANTAR.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Evangelho ---");
+    TRANSFORMAI_EM_VINHO("Proclamação do Santo Evangelho.Antes: Cruz Tripla e ao final: 'Glória a vós, Senhor'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé fazer a Cruz e Responder");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Responder");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Deixar a mente fluir entre fantasias e desejos");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Quando deveria estar em pé para saudar o Cristo que vem, seus pensamentos permaneciam dispersos. A falta de domínio interior o deixou desconectado.");
+      TRANSFORMAI_EM_VINHO("Você não estava verdadeiramente presente para o Evangelho, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu em pé!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar EM PÉ.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Homilia ---");
+    TRANSFORMAI_EM_VINHO("O sacerdote explica a Palavra de Deus. Escute com atenção e reflita.");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Escutar com atenção");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Escutar com atenção");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar e Escutar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Ocupar-se em críticas interiores às palavras do sacerdote");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 2;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Enquanto o sacerdote procurava transmitir a Mensagem, você permanecia julgando e questionando. O espírito crítico impediu que você recebesse a Graça.");
+      TRANSFORMAI_EM_VINHO("A dureza do coração deixou você apartado da verdade sendo proclamada, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se sentou para escutar a homilia!");
+        pontuacao += 1;
+        posicao_atual = 2;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era SENTAR e escutar com atenção.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Profissão de Fé (Creio) ---");
+    TRANSFORMAI_EM_VINHO("Recitação do Credo. Responda: 'Creio em um só Deus, Pai todo-poderoso...'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Recitar");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Recitar");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Alguém fora da igreja zomba do credo e você sai para defender agressivamente a sua fé");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Sua defesa agressiva da fé afastou você da mansidão que Cristo pregava. O orgulho apostólico rompeu a comunhão,");
+      TRANSFORMAI_EM_VINHO("você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se levantou para o Creio!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era LEVANTAR.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Oração dos Fiéis ---");
+    TRANSFORMAI_EM_VINHO("Orações pela Igreja e pelo mundo. Responda: 'Atendei-nos, Senhor' após cada intenção");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Responder");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Responder");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Recusar se unir aos outros em oração por soberba espiritual");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Você se isolou da comunidade de fé. A soberba silenciosa impediu que você se solidarizasse com os irmãos em oração.");
+      TRANSFORMAI_EM_VINHO("Sem comunhão com o Povo de Deus, você ficou sozinho e longe do Corpo Místico, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu em pé!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar EM PÉ.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n\n********** PARTE 3: LITURGIA EUCARÍSTICA **********\n");
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Preparação dos Dons ---");
+    TRANSFORMAI_EM_VINHO("Oferta do pão e vinho. Prepare-se interiormente e responda ao final: 'Bendito e louvado seja...'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    TRANSFORMAI_EM_VINHO("1 - Levantar");
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 2) {
+      TRANSFORMAI_EM_VINHO("2 - Continuar Sentado e Responder");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 2) {
+      TRANSFORMAI_EM_VINHO("2 - Sentar e Responder");
+    }
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Entregar dons materiais mas com espírito de comparação");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 2;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Enquanto oferecia os dons, seu coração media seu sacrifício contra o dos outros. A comparação envenenou o ato de doação.");
+      TRANSFORMAI_EM_VINHO("Você ofereceu para ser visto, não para dar a Deus. A oferenda perdeu seu valor espiritual, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se sentou durante a preparação!");
+        pontuacao += 1;
+        posicao_atual = 2;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era SENTAR.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Oração Eucarística (Consagração) ---");
+    TRANSFORMAI_EM_VINHO("Momento solene da Consagração do Pão e Vinho. Responda reverentemente: 'Amém'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    TRANSFORMAI_EM_VINHO("1 - Levantar");
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 3) {
+      TRANSFORMAI_EM_VINHO("3 - Continuar Ajoelhado e Responder Amém");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 3) {
+      TRANSFORMAI_EM_VINHO("3 - Ajoelhar e Responder Amém");
+    }
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Um cansaço estranho te chama");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 3;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ A preguiça espiritual venceu sua determinação. No momento em que deveria estar em silêncio adorador, você se retirou.");
+      TRANSFORMAI_EM_VINHO("Sua ausência neste ápice sagrado rompeu a ponte entre você e o Mistério da Redenção, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se ajoelhou para a Consagração!");
+        pontuacao += 1;
+        posicao_atual = 3;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era AJOELHAR.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Cântico do Cordeiro (Agnus Dei) ---");
+    TRANSFORMAI_EM_VINHO("Canto antes da comunhão. Responda: 'Cordeiro de Deus que tirais os pecados do mundo, tende piedade de nós'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    TRANSFORMAI_EM_VINHO("1 - Levantar");
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 3) {
+      TRANSFORMAI_EM_VINHO("3 - Continuar Ajoelhado e Responder");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 3) {
+      TRANSFORMAI_EM_VINHO("3 - Ajoelhar e Responder");
+    }
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Você sente cheiro de pizza");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 3;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Você saiu da igreja para satisfazer uma fome passageira e, ao voltar, a Missa já havia terminado.");
+      TRANSFORMAI_EM_VINHO("Ao trocar o Banquete Eucarístico por algo momentâneo, perdeu o encontro que dá sentido a todos os outros.");
+      TRANSFORMAI_EM_VINHO("Fim de jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se levantou com reverência para a entrada!");
+        pontuacao += 1;
+        posicao_atual = 3;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar AJOELHADO.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Comunhão (Corpo e Sangue de Cristo) ---");
+    TRANSFORMAI_EM_VINHO("Momento de receber a Eucaristia. Dirija-se ao sacerdote e responda: 'Amém'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e comungar (se estiver sem pecado mortal)");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e comungar (se estiver sem pecado mortal)");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Você vê uma bolsa de dinheiro esquecida no chão");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Você saiu para ficar com o dinheiro encontrado e perdeu a missa. A cobiça te afastou do pão celeste, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se levantou para comungar!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era LEVANTAR.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n\n********** PARTE 4: RITOS FINAIS **********\n");
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Oração Pós-Comunhão ---");
+    TRANSFORMAI_EM_VINHO("Agradecimento pelas graças recebidas. Responda ao final: 'Amém'");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé e Responder");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar e Responder");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Apenas Orar");
+    TRANSFORMAI_EM_VINHO("5 - Permitir que o repouso depois da Comunhão seja preenchido por pensamentos triviais");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Após receber a Eucaristia, você não guardou o repouso contemplativo. O mundo invadiu sua alma logo após o encontro com Cristo.");
+      TRANSFORMAI_EM_VINHO("A falta de silêncio interior anulou a ação da Graça, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu em pé!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar EM PÉ.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Avisos e Comunicações ---");
+    TRANSFORMAI_EM_VINHO("Informações breves à comunidade.");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    TRANSFORMAI_EM_VINHO("1 - Levantar");
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 2) {
+      TRANSFORMAI_EM_VINHO("2 - Continuar Sentado");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 2) {
+      TRANSFORMAI_EM_VINHO("2 - Sentar");
+    }
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Orar");
+    TRANSFORMAI_EM_VINHO("5 - Pessoa zombando da sua fé");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 2;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ A ira te cegou e você partiu para o confronto. O lugar de paz se tornou palco de desordem por sua falta de paciência.");
+      TRANSFORMAI_EM_VINHO("A comunidade perdeu um membro capaz de testemunho humilde, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se sentou para os avisos!");
+        pontuacao += 1;
+        posicao_atual = 2;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era SENTAR.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Bênção Final ---");
+    TRANSFORMAI_EM_VINHO("O sacerdote abençoa o povo.");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Orar");
+    TRANSFORMAI_EM_VINHO("5 - Recusar interiormente a bênção por sentimento de indignidade");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Seu coração se fechou à generosidade de Deus. Ao recusar a bênção por sentimento falso de indignidade, você bloqueou a Graça que queria abraçá-lo.");
+      TRANSFORMAI_EM_VINHO("A desconfiança na misericórdia divina afastou você da proteção que Deus oferecia para sua jornada, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você se levantou para a bênção!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era LEVANTAR.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n--- Despedida ---");
+    TRANSFORMAI_EM_VINHO("'Ide em paz, aleluia!' - O sacerdote se retira.");
+    TRANSFORMAI_EM_VINHO("Pontuação: %d\n", pontuacao);
+    SE_FOR_VOSSA_VONTADE (posicao_atual == 1) {
+      TRANSFORMAI_EM_VINHO("1 - Continuar em Pé");
+    }
+    SE_FOR_VOSSA_VONTADE (posicao_atual != 1) {
+      TRANSFORMAI_EM_VINHO("1 - Levantar");
+    }
+    TRANSFORMAI_EM_VINHO("2 - Sentar");
+    TRANSFORMAI_EM_VINHO("3 - Ajoelhar");
+    TRANSFORMAI_EM_VINHO("4 - Orar");
+    TRANSFORMAI_EM_VINHO("5 - Sair da Missa sem deixar levar a Graça para o mundo");
+    TRANSFORMAI_EM_VINHO("Sua escolha: ");
+    OUVI_A_VOZ(escolha);
+    acao_correta = 1;
+    SE_FOR_VOSSA_VONTADE (escolha == 5) {
+      TRANSFORMAI_EM_VINHO("\n✗ Você se recusou interiormente a ser instrumento da Graça. A indiferença frente ao chamado de levar Cristo ao mundo apartou você do propósito sagrado da Missa.");
+      TRANSFORMAI_EM_VINHO("Sem deixar o encontro com Cristo transformar sua missão, você perdeu a oportunidade de ser apóstolo no cotidiano, você perdeu o jogo.");
+      PERDOAI(jogando);
+    }
+    SE_FOR_VOSSA_VONTADE (escolha == acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✝ Correto! Você permaneceu em pé até o final!");
+        pontuacao += 1;
+        posicao_atual = 1;
+      }
+    }
+    SE_FOR_VOSSA_VONTADE (escolha != acao_correta) {
+      SE_FOR_VOSSA_VONTADE (jogando != 0) {
+        TRANSFORMAI_EM_VINHO("\n✗ Errado! O correto era ficar EM PÉ.");
+      }
+    }
+  }
+
+  SE_FOR_VOSSA_VONTADE (jogando != 0) {
+    TRANSFORMAI_EM_VINHO("\n\n========== FIM DA SANTA MISSA ==========");
+    TRANSFORMAI_EM_VINHO("Você completou toda a celebração!");
+    TRANSFORMAI_EM_VINHO("Pontuação final: %d/21", pontuacao);
+    TRANSFORMAI_EM_VINHO("\nQue Deus vos abençoe e guarde sempre!");
+    TRANSFORMAI_EM_VINHO("Ide em paz e o Senhor vos acompanhe!");
+  }
+
+  TRANSFORMAI_EM_VINHO("\n\nAmém.");
+}
+AMÉM;
