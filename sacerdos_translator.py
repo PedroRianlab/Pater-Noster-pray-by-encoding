@@ -90,6 +90,13 @@ def translate_pater_noster_to_python(pater_noster_code):
             indent_level = max(0, indent_level - 1)
             continue
 
+        # Linhas que começam com identificadores minúsculos são código normal (ex.: pontuacao += 1)
+        if stripped_line and stripped_line[0].islower():
+            if "=" in stripped_line or any(op in stripped_line for op in ['+', '-', '*', '/', '%']):
+                validar_tipo_pao(stripped_line)
+                python_code.append(f"{current_indent}{stripped_line_no_semicolon}")
+            continue
+
         command_match = re.match(r'([A-Z_]+)', stripped_line, re.IGNORECASE)
         
         if not command_match:
