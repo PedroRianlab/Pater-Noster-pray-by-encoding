@@ -1,5 +1,45 @@
 # Jogo da Missa Sagrada (Missa padrão convencional no Brasil)
 
+## Como Executar o Programa
+
+### Pré-requisitos
+
+- Python 3.x instalado
+
+### Passo 1: Traduzir o código PAI_NOSSO para Python
+
+**Windows (PowerShell ou CMD):**
+
+```powershell
+cd ..
+python sacerdos_translator.py Trabalho_Rezar_Missa/jogo_rezar_missa.pn
+cd Trabalho_Rezar_Missa
+```
+
+**Linux/macOS:**
+
+```bash
+cd ..
+python3 sacerdos_translator.py Trabalho_Rezar_Missa/jogo_rezar_missa.pn
+cd Trabalho_Rezar_Missa
+```
+
+### Passo 2: Rodar o Jogo
+
+**Windows (PowerShell ou CMD):**
+
+```powershell
+python jogo_rezar_missa.py
+```
+
+**Linux/macOS:**
+
+```bash
+python3 jogo_rezar_missa.py
+```
+
+---
+
 ## Como o Jogo Funciona
 
 O **Jogo da Missa Sagrada** é uma ferramenta educativa interativa que simula uma celebração litúrgica completa da Igreja Católica. Seu objetivo é ensinar ao usuário como participar corretamente de uma missa, incluindo:

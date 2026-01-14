@@ -1,0 +1,399 @@
+OREMOS { SACRAMENTO } = "Sou Rei, sou o Bom Pastor! Vinde ao banquete que vos preparei E fome jamais tereis! A quem vamos, ó Senhor? Só tu tens palavras de vida E te dás em refeição";
+
+
+PAI_NOSSO() {
+      BATISMO ÁGUA resposta = -1; //armazaena as respostas do ussuário.
+
+    TRANSFORMAI_EM_VINHO("-----------------------------------------------------------------------------------------");
+    TRANSFORMAI_EM_VINHO(" ____   ____  ______    ___  ____       ____    ___   _____ ______    ___  ____                   ");
+    TRANSFORMAI_EM_VINHO("|    \\ /    ||      |  /  _]|    \\     |    \\  /   \\ / ___/|      |  /  _]|    \\                  ");
+    TRANSFORMAI_EM_VINHO("|  o  )  o  ||      | /  [_ |  D  )    |  _  ||     (   \\_ |      | /  [_ |  D  )                 ");
+    TRANSFORMAI_EM_VINHO("|   _/|     ||_|  |_||    _]|    /     |  |  ||  O  |\\__  ||_|  |_||    _]|    /                  ");
+    TRANSFORMAI_EM_VINHO("|  |  |  _  |  |  |  |   [_ |    \\     |  |  ||     |/  \\ |  |  |  |   [_ |    \\                  ");
+    TRANSFORMAI_EM_VINHO("|  |  |  |  |  |  |  |     ||  .  \\    |  |  ||     |\\    |  |  |  |     ||  .  \\                 ");
+    TRANSFORMAI_EM_VINHO("|__|  |__|__|  |__|  |_____||__|\\_|    |__|__| \\___/  \\___|  |__|  |_____||__|\\_|                 ");
+    TRANSFORMAI_EM_VINHO(" ______    ___  __ __  ______       ____  ___    __ __    ___  ____   ______  __ __  ____     ___ ");
+    TRANSFORMAI_EM_VINHO("|      |  /  _]|  |  ||      |     /    ||   \\  |  |  |  /  _]|    \\ |      ||  |  ||    \\   /  _]");
+    TRANSFORMAI_EM_VINHO("|      | /  [_ |  |  ||      |    |  o  ||    \\ |  |  | /  [_ |  _  ||      ||  |  ||  D  ) /  [_ ");
+    TRANSFORMAI_EM_VINHO("|_|  |_||    _]|_   _||_|  |_|    |     ||  D  ||  |  ||    _]|  |  ||_|  |_||  |  ||    / |    _]");
+    TRANSFORMAI_EM_VINHO("  |  |  |   [_ |     |  |  |      |  _  ||     ||  :  ||   [_ |  |  |  |  |  |  :  ||    \\ |   [_ ");
+    TRANSFORMAI_EM_VINHO("  |  |  |     ||  |  |  |  |      |  |  ||     | \\   / |     ||  |  |  |  |  |     ||  .  \\|     |");
+    TRANSFORMAI_EM_VINHO("  |__|  |_____||__|__|  |__|      |__|__||_____|  \\_/  |_____||__|__|  |__|   \\__,_||__|\\_||_____|");
+    
+    TRANSFORMAI_EM_VINHO("-----------------------------------------------------------------------------------------");
+
+    TRANSFORMAI_EM_VINHO("Esse programa busca ser um guia pra a misa na forma de um jogo text adventure simples.");
+    TRANSFORMAI_EM_VINHO("Atráves de uma pequena narrativa e escolhas rápidas, esse prgrama busca mostrar como se portar durante os rituais.");
+    TRANSFORMAI_EM_VINHO("\nAs respostas e interações são numeradas, para respondê-las, apenas digite o número correspondente a sua resposta.");
+    TRANSFORMAI_EM_VINHO("As perguntas e respostas serão repetidas até a entrada de uma resposta válida ou erro.");
+    TRANSFORMAI_EM_VINHO("Mantenha em mente que esse programa só cobre cerca de metade do que é o ritual da missa.");
+
+
+
+    ENQUANTO_EU_VIVERES_E_ATE_QUANDO_TU_QUISERES (resposta != 1) {    
+
+    TRANSFORMAI_EM_VINHO("\n Comandos:");
+    TRANSFORMAI_EM_VINHO("\n Iniciar: 1");
+    TRANSFORMAI_EM_VINHO("\n Sair: 0");
+    TRANSFORMAI_EM_VINHO("\n *Pode causar erro em valores não numéricos*");
+
+    OUVI_A_VOZ(resposta);
+    SE_FOR_VOSSA_VONTADE(resposta == 0) {
+        VOSSA_VONTADE 1;
+      }
+    }
+  
+    TRANSFORMAI_EM_VINHO("\nApós um banho, com uma boa roupa e propriamente arrumado, você sai de casa.");
+    TRANSFORMAI_EM_VINHO("Você, recém convertido, caminha em direção a igreja, tentando lembrar de como se portar.");
+    
+    TRANSFORMAI_EM_VINHO("Ao ultrapasar o limiar das portas da santa casa, você...");
+    BATISMO ÁGUA resposta = -1;
+
+    ENQUANTO_EU_VIVERES_E_ATE_QUANDO_TU_QUISERES (resposta != 1 and resposta != 2) {    
+
+    TRANSFORMAI_EM_VINHO("\n  1 - Se curva perante ao altar e faz o sinal da cruz");
+    TRANSFORMAI_EM_VINHO("  2 - Procura, silenciosamente, um local para sentar. \n");
+
+    OUVI_A_VOZ(resposta);
+
+    SE_FOR_VOSSA_VONTADE(resposta == 1) {
+        TRANSFORMAI_EM_VINHO("\n  Você se lembra que, muitos, por custusme e respeito, fazem o sinal da cruz e se curvam no altar");
+        TRANSFORMAI_EM_VINHO("Mesmo que não faça parte necessariamente da ritualistica da missa, foi também o faz em respeito.");
+        TRANSFORMAI_EM_VINHO("Após esse singelo gesto de respeito, você busca uma cadeira.");
+      }
+      SE_NAO_FOR_VOSSA_VONTADE(resposta == 2) {
+        TRANSFORMAI_EM_VINHO("\n  Ao entrar, você vê alguns se curvando perante o altar e fazendo o sinal da cruz");
+        TRANSFORMAI_EM_VINHO("Você sabe, porém, que não é parte da ritualistica da missa, apenas um gesto simbólico de adoração e respeito");
+        TRANSFORMAI_EM_VINHO("Tanto por timidez, mas também por ser recém convertido e não ter ainda muita certeza dos porquês, você ignora e busca um assento.");
+        TRANSFORMAI_EM_VINHO("Você sabe que ignorar isso não atraplha ou desrrespeita a ritualistica.");
+      }	
+    }
+
+  TRANSFORMAI_EM_VINHO("Após encontrar um local para se sentar, você tenta se lembrar do que iria acontecer primeiro.");
+  TRANSFORMAI_EM_VINHO("Primeiro são os ritos iniciais, que são:");
+  TRANSFORMAI_EM_VINHO("Primeiro o canto de entrada");
+  TRANSFORMAI_EM_VINHO("Depois a saudação ao altar do sacerdote.");
+  TRANSFORMAI_EM_VINHO("então o sinal da cruz");
+  TRANSFORMAI_EM_VINHO("A saudação liturgica");
+    TRANSFORMAI_EM_VINHO("O ato penitencial");
+  TRANSFORMAI_EM_VINHO("O Kyrie Eleyson");
+  TRANSFORMAI_EM_VINHO("Glória");
+  TRANSFORMAI_EM_VINHO("E a oração da coleta.");
+  
+  TRANSFORMAI_EM_VINHO("\n durante todas os ritos iniciais você:... ");
+      BATISMO ÁGUA resposta = -1;
+
+      ENQUANTO_EU_VIVERES_E_ATE_QUANDO_TU_QUISERES (resposta != 1) {
+        TRANSFORMAI_EM_VINHO("\n  1 - Se levanta e fica em pé.");
+        TRANSFORMAI_EM_VINHO("  2 - Se Ajoelha.");
+        TRANSFORMAI_EM_VINHO("  3 - Permance sentado.");
+        OUVI_A_VOZ(resposta);
+
+        SE_FOR_VOSSA_VONTADE(resposta == 2 or resposta == 3) {
+            TRANSFORMAI_EM_VINHO("Ao pensar nisso, você olha ao redor e percebe que os maioria não está fazendo o mesmo que você");
+            TRANSFORMAI_EM_VINHO("Então, sentindo que está fazendo algo errado, você pensa novamente");
+        }
+        
+        TRANSFORMAI_EM_VINHO("Então, sentindo que está fazendo algo errado, você pensa novamente");
+      }
+      
+      TRANSFORMAI_EM_VINHO("Sim, você lembra que durante todos os ritos iniciais você deve ficar de pé.");
+      TRANSFORMAI_EM_VINHO("Com isso, você, assim como a maioria daqueles ao seu redor, fica de pé.");
+
+
+      TRANSFORMAI_EM_VINHO("Assim, você o canto de entrada com a prossição ao altar.");
+      TRANSFORMAI_EM_VINHO("O sacerdote, então beija ou se ajoelha ao altar e faz o sinal da cruz e saúda a todos.");
+      
+      TRANSFORMAI_EM_VINHO("Ao fazer o sinal da cruz ele diz:\“Em nome do Pai, do Filho e do Espírito Santo.\”");
+      TRANSFORMAI_EM_VINHO("E todos respondem: ");
+      TRANSFORMAI_EM_VINHO("\n  1 - Em nome do pai.");
+      TRANSFORMAI_EM_VINHO("\n  2 - Glória");
+      TRANSFORMAI_EM_VINHO("\n  3 - Amém");
+      BATISMO ÁGUA resposta = -1;
+      OUVI_A_VOZ(resposta);
+
+
+      SE_FOR_VOSSA_VONTADE(resposta != 3) {
+        TRANSFORMAI_EM_VINHO("\n  Ao pensar em responde, a dúvida do que de fato falar bate.");
+        TRANSFORMAI_EM_VINHO("Nesse momento de exitação, as vozes coletivas falam ao seu redor");
+        TRANSFORMAI_EM_VINHO("\"Amém\"");
+        TRANSFORMAI_EM_VINHO("Você, um pouco atrasado por ter confundido anteriormente o que dize, repete o mesmo");
+      }
+      SE_NAO_FOR_VOSSA_VONTADE {
+                TRANSFORMAI_EM_VINHO("Junto com quase todos ao seu redor você fala:");
+                TRANSFORMAI_EM_VINHO("Amém");
+      }
+
+      TRANSFORMAI_EM_VINHO("Na saudação liturgica ele fala \“O Senhor esteja convosco.\”");
+      TRANSFORMAI_EM_VINHO("E você, assim como todos, responde: ");
+
+      TRANSFORMAI_EM_VINHO("\n  1 - Ele está no meio de nós.");
+      TRANSFORMAI_EM_VINHO("\n  2 - Glória");
+      TRANSFORMAI_EM_VINHO("\n  3 - Em nome do pai.");
+      BATISMO ÁGUA resposta = -1;
+      OUVI_A_VOZ(resposta);
+
+
+      SE_FOR_VOSSA_VONTADE(resposta != 1) {
+        TRANSFORMAI_EM_VINHO("\n  Ao pensar em responde, a dúvida do que de fato falar bate.");
+        TRANSFORMAI_EM_VINHO("Nesse momento de exitação, as vozes coletivas falam ao seu redor");
+        TRANSFORMAI_EM_VINHO("\"Ele está no meio de nós.\"");
+        TRANSFORMAI_EM_VINHO("Você, um pouco atrasado por ter confundido anteriormente o que dize, repete o mesmo");
+      }
+      SE_NAO_FOR_VOSSA_VONTADE {
+                TRANSFORMAI_EM_VINHO("Junto com quase todos ao seu redor você fala:");
+                TRANSFORMAI_EM_VINHO("\"Ele está no meio de nós.\"");
+      }
+
+      TRANSFORMAI_EM_VINHO("Em seguida ocorre o ato penitencial, onde você e todos se reconhecem como pecadores e buscam absolvisão.");
+      TRANSFORMAI_EM_VINHO("É cantado, então o Kyrie Eleison, que pode ou não fazer parte da missa, e é um clamor por misericordia.");
+      TRANSFORMAI_EM_VINHO("E então é cantado o \"gloria a Deus nas alturas\" que você se lembra, não é cantado no advento nem na quaresma");
+      TRANSFORMAI_EM_VINHO("E o último dos ritos iniciais, a oração da coleta, em que as itenções do fiés são entreges simbolicamentes");
+      TRANSFORMAI_EM_VINHO("enquanto o padre reza pelos fiéis em um momento de silêncio.");
+
+      TRANSFORMAI_EM_VINHO("\nSe você lembra corretamente, depois do ritos iniciais, vem a liturgia da palavra");
+      TRANSFORMAI_EM_VINHO("Durante os momento iniciais dessa, você ...");
+
+      BATISMO ÁGUA resposta = -1;
+
+      ENQUANTO_EU_VIVERES_E_ATE_QUANDO_TU_QUISERES (resposta != 3) {
+        TRANSFORMAI_EM_VINHO("\n  1 - Permance de pé.");
+        TRANSFORMAI_EM_VINHO("  2 - Se Ajoelha.");
+        TRANSFORMAI_EM_VINHO("  3 - Sentá-se.");
+        OUVI_A_VOZ(resposta);
+
+
+        SE_FOR_VOSSA_VONTADE(resposta == 1 or resposta == 2) {
+            TRANSFORMAI_EM_VINHO("Ao pensar nisso, você olha ao redor e percebe que os maioria não está fazendo o mesmo que você");
+        }
+        
+        TRANSFORMAI_EM_VINHO("Então, sentindo que está fazendo algo errado, você pensa novamente");
+      }
+      TRANSFORMAI_EM_VINHO("Finalmente, você pode descançar as perna e sentar, e assim você faz.");
+      
+      TRANSFORMAI_EM_VINHO("Na litrurgia da palavra ocorre: ");
+
+      TRANSFORMAI_EM_VINHO("A primeira litura.");
+      TRANSFORMAI_EM_VINHO("O salmo resposorial.");
+      TRANSFORMAI_EM_VINHO("Segunda Leitura, quando é domingo ou solenidade");
+      TRANSFORMAI_EM_VINHO("Aclamação ao Evangelho");
+      TRANSFORMAI_EM_VINHO("Evangélio");
+      TRANSFORMAI_EM_VINHO("Profissão de Fé, ao domingos e solenidades");
+      TRANSFORMAI_EM_VINHO("E a Oração dos fiéis.");
+
+      TRANSFORMAI_EM_VINHO("Ao fim da primeira Leitura, o leitor diz:");
+      TRANSFORMAI_EM_VINHO("Palavra do Senhor");
+      TRANSFORMAI_EM_VINHO("E você responde...");
+
+      TRANSFORMAI_EM_VINHO("\n  1 - Em nome do pai.");
+      TRANSFORMAI_EM_VINHO("\n  2 - Glória");
+      TRANSFORMAI_EM_VINHO("\n  3 - Graças a Deus");
+      BATISMO ÁGUA resposta = -1;
+      OUVI_A_VOZ(resposta);
+
+      SE_FOR_VOSSA_VONTADE(resposta != 3) {
+        TRANSFORMAI_EM_VINHO("\n  Ao pensar em responde, a dúvida do que de fato falar bate.");
+        TRANSFORMAI_EM_VINHO("Nesse momento de exitação, as vozes coletivas falam ao seu redor");
+        TRANSFORMAI_EM_VINHO("\"Graças a Deus\"");
+        TRANSFORMAI_EM_VINHO("Você, um pouco atrasado por ter confundido anteriormente o que dize, repete o mesmo");
+      }
+      SE_NAO_FOR_VOSSA_VONTADE {
+                TRANSFORMAI_EM_VINHO("Junto com quase todos ao seu redor você fala:");
+                TRANSFORMAI_EM_VINHO("\"Graças a Deus\"");
+      }
+      TRANSFORMAI_EM_VINHO("E, então, ocorre o salmo responsorial, uma reposta orante a primeira leitura.");
+      TRANSFORMAI_EM_VINHO("Então a segunda leitura, quando ela ocorre.");
+      TRANSFORMAI_EM_VINHO("Em seguida, a Aclamação ao Evangelho (Aleluia).");
+
+      TRANSFORMAI_EM_VINHO("Quando essa começa, você ...");
+      BATISMO ÁGUA resposta = -1;
+
+      ENQUANTO_EU_VIVERES_E_ATE_QUANDO_TU_QUISERES (resposta != 1) {
+        TRANSFORMAI_EM_VINHO("\n  1 - Se levanta e fica em pé.");
+        TRANSFORMAI_EM_VINHO("  2 - Se Ajoelha.");
+        TRANSFORMAI_EM_VINHO("  3 - Permance sentado.");
+        OUVI_A_VOZ(resposta);
+        SE_FOR_VOSSA_VONTADE(resposta == 2 or resposta == 3) {
+            TRANSFORMAI_EM_VINHO("Ao pensar nisso, você olha ao redor e percebe que os maioria não está fazendo o mesmo que você");
+            TRANSFORMAI_EM_VINHO("Então, sentindo que está fazendo algo errado, você pensa novamente");
+        }
+        
+        TRANSFORMAI_EM_VINHO("Então, sentindo que está fazendo algo errado, você pensa novamente");
+      }
+ 
+    TRANSFORMAI_EM_VINHO("Você lembra que durante a quaresma, pode ser outras aclamações, além do evangélio");
+    TRANSFORMAI_EM_VINHO("E então, a proclamação do evangelho, em que muitos comçam com o sinal da cruz");
+    TRANSFORMAI_EM_VINHO("Ao fim dessa, é dito \“Palavra da Salvação.\”");
+
+    TRANSFORMAI_EM_VINHO("E você responde ...");
+
+      TRANSFORMAI_EM_VINHO("\n  1 - Em nome do pai.");
+      TRANSFORMAI_EM_VINHO("\n  2 - “Glória a vós, Senhor.");
+      TRANSFORMAI_EM_VINHO("\n  3 - Graças a Deus");
+      BATISMO ÁGUA resposta = -1;
+      OUVI_A_VOZ(resposta);
+
+      SE_FOR_VOSSA_VONTADE(resposta != 2) {
+        TRANSFORMAI_EM_VINHO("\n  Ao pensar em responde, a dúvida do que de fato falar bate.");
+        TRANSFORMAI_EM_VINHO("Nesse momento de exitação, as vozes coletivas falam ao seu redor");
+        TRANSFORMAI_EM_VINHO("\"“Glória a vós, Senhor.\"");
+        TRANSFORMAI_EM_VINHO("Você, um pouco atrasado por ter confundido anteriormente o que dize, repete o mesmo");
+      }
+      SE_NAO_FOR_VOSSA_VONTADE {
+                TRANSFORMAI_EM_VINHO("Junto com quase todos ao seu redor você fala:");
+                TRANSFORMAI_EM_VINHO("\"“Glória a vós, Senhor.\"");
+      }
+
+      TRANSFORMAI_EM_VINHO("Em seguida, vem a omilia, que é a explicação da palavra proclamada.");
+      TRANSFORMAI_EM_VINHO("\nEssa, você se lembra, é um momento de se sentar e que logo em seuida você precissará levantar novamente.");
+      TRANSFORMAI_EM_VINHO("\nEntão, há, caso seja domingo ou solenidade, a Profissão da fé, onde você fica de pé.");
+      TRANSFORMAI_EM_VINHO("Nela, a assembleia responde a palavra declarando a fé, que pode ser:");
+      
+      TRANSFORMAI_EM_VINHO("\nCreio Niceno-Constantinopolitano");
+      TRANSFORMAI_EM_VINHO("Creio dos Apóstolos");
+
+      TRANSFORMAI_EM_VINHO("\nA última parte da liturgia da palavra é a oração dos fiéis.");
+      TRANSFORMAI_EM_VINHO("Nela, na qual você deve estar em pé, são feitas as preces da Igreja, autoridades, necessitados e comunidade");
+
+
+      TRANSFORMAI_EM_VINHO("Agora, pelo que você se lembra, é a litrurgia eucaristica.");
+      TRANSFORMAI_EM_VINHO("Pelo que você lembra, nela há:");
+      TRANSFORMAI_EM_VINHO("A preparação dasa oferendas, o ofertório");
+      TRANSFORMAI_EM_VINHO("A oração sobre as oferendas.");
+      TRANSFORMAI_EM_VINHO("Oração Eucarística");
+      TRANSFORMAI_EM_VINHO("O rito da comunão.");
+
+      TRANSFORMAI_EM_VINHO("Durante a preparação do oferótio você se lembra que deve sentar-se.");
+      TRANSFORMAI_EM_VINHO("Nessa parte, há a coleta das ofertas, geralmente dinheiro.");
+      TRANSFORMAI_EM_VINHO("Após isso, há a oração as oferendas.");
+      TRANSFORMAI_EM_VINHO("Nela, você fica de pé.");
+      TRANSFORMAI_EM_VINHO("Após a oração, o padre diz:");
+      TRANSFORMAI_EM_VINHO("Orai, irmãos e irmãs…");
+      TRANSFORMAI_EM_VINHO("E você, assim como a assembleia, responde ...");
+
+
+      TRANSFORMAI_EM_VINHO("\n  1 - Em nome do pai.");
+      TRANSFORMAI_EM_VINHO("\n  2 - Receba o Senhor por tuas mãos…");
+      TRANSFORMAI_EM_VINHO("\n  3 - Graças a Deus");
+      BATISMO ÁGUA resposta = -1;
+      OUVI_A_VOZ(resposta);
+
+      SE_FOR_VOSSA_VONTADE(resposta != 2) {
+        TRANSFORMAI_EM_VINHO("\n  Ao pensar em responde, a dúvida do que de fato falar bate.");
+        TRANSFORMAI_EM_VINHO("Nesse momento de exitação, as vozes coletivas falam ao seu redor");
+        TRANSFORMAI_EM_VINHO("\"Receba o Senhor por tuas mãos…\"");
+        TRANSFORMAI_EM_VINHO("Você, um pouco atrasado por ter confundido anteriormente o que dize, repete o mesmo");
+      }
+      SE_NAO_FOR_VOSSA_VONTADE {
+                TRANSFORMAI_EM_VINHO("Junto com quase todos ao seu redor você fala:");
+                TRANSFORMAI_EM_VINHO("\"Receba o Senhor por tuas mãos…\"");
+      }
+
+      TRANSFORMAI_EM_VINHO("Após isso, a oração eucaristica, que é quando, há a consagração do pão e vinho.");
+      TRANSFORMAI_EM_VINHO("Nessa parte, você sabe que vai ter constantemente alternar entre se Ajoelhar e levantar, iniciando em pé.");
+      TRANSFORMAI_EM_VINHO("Primeiro, no prefácio, há o diagolo, e pelo que você se lembra ele vai algo como:");
+
+      
+      TRANSFORMAI_EM_VINHO("\nPadre: O Senhor esteja convosco.");
+      TRANSFORMAI_EM_VINHO("Resposta: Ele está no meio de nós.");
+      TRANSFORMAI_EM_VINHO("Padre: Corações ao alto.");
+      TRANSFORMAI_EM_VINHO("Resposta: O nosso coração está em Deus.");
+      TRANSFORMAI_EM_VINHO("Padre: Demos graças ao Senhor, nosso Deus.");
+      TRANSFORMAI_EM_VINHO("Resposta: É nosso dever e nossa salvação.");
+
+      TRANSFORMAI_EM_VINHO("\nApós isso, há o canto de louvor");
+      TRANSFORMAI_EM_VINHO("\n“Santo, Santo, Santo, Senhor Deus do universo…\"");
+      TRANSFORMAI_EM_VINHO("Após isso, você se ajoelha e espera a epiclese.");
+      TRANSFORMAI_EM_VINHO("A epiclese é quando o padre estende as mão para o pão e vinho e invoca o espiroto santo.");
+      TRANSFORMAI_EM_VINHO("Ocorre a consagração, que é o quando o padre repete as palavras da última ceia, e a ostia se torna o corpo de cristo.");
+      TRANSFORMAI_EM_VINHO("Ocorre a aclamação do mistério da fé, em é necessário responder um dos seguintes, dependendo apena da tradição local:");
+
+      
+      TRANSFORMAI_EM_VINHO("\nAnunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus");
+      TRANSFORMAI_EM_VINHO("\nTodas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda");
+      TRANSFORMAI_EM_VINHO("\nSalvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.");
+      TRANSFORMAI_EM_VINHO("Depois, vem a Anamnese e Oração da Igreja, que é quando ocorre a recordação da morte e ressurreição de cristo."); 
+
+     TRANSFORMAI_EM_VINHO("Em seguida a doxologia final.");
+     TRANSFORMAI_EM_VINHO("Nelá, o padre eleva o corpo e sangue de cristo e fala: ");
+     TRANSFORMAI_EM_VINHO("Por Cristo, com Cristo, em Cristo…");
+     TRANSFORMAI_EM_VINHO("E você e o resto responde com um forte AMÉM");
+
+     
+     TRANSFORMAI_EM_VINHO("Agora, no rito da comunhão, onde você finalmente se levanta.");
+     TRANSFORMAI_EM_VINHO("E você permance em pé durante a reza do pai nosso e cordeiro de Deus.");
+
+     TRANSFORMAI_EM_VINHO("\nVocê fez a primeira comunhão?");
+     BATISMO ÁGUA resposta = -1;
+     
+      ENQUANTO_EU_VIVERES_E_ATE_QUANDO_TU_QUISERES (resposta != 1 and resposta != 2) {
+        TRANSFORMAI_EM_VINHO(" 1 - Sim");
+        TRANSFORMAI_EM_VINHO(" 2 - Não");
+        OUVI_A_VOZ(resposta);
+      }
+
+      SE_FOR_VOSSA_VONTADE(resposta == 1) {
+        TRANSFORMAI_EM_VINHO("Você então se levanta e vai a fila da comunhão.");
+        TRANSFORMAI_EM_VINHO("Ao fim da fila. você come a ostia banhada em vinho, que é corpo e sangue de cristo");
+        TRANSFORMAI_EM_VINHO("Após isso, você retorna ao seu assento.");
+      }
+      SE_NAO_FOR_VOSSA_VONTADE {
+        TRANSFORMAI_EM_VINHO("Você lembra, então que você não pode seguir os outros na fila da comunhão.");
+        TRANSFORMAI_EM_VINHO("Apenas aqueles que fizeram a eucaristia (primeira comunhão) podem comungar na misa.");
+        TRANSFORMAI_EM_VINHO("Com isso, você permance no seu assento, geralmente sentado."); 
+      }
+
+        TRANSFORMAI_EM_VINHO("\n Após a comunhão, pelo que você se lembra, vem os ritos finais.");
+        TRANSFORMAI_EM_VINHO("Nisso, o padre anuncia os avisos, caso hajam algum.");
+        TRANSFORMAI_EM_VINHO("Depois, vem o dialogo de depedida, em que você se levanta.");
+        TRANSFORMAI_EM_VINHO("O diagolo deve ser algo como:");
+        
+        TRANSFORMAI_EM_VINHO("\nPadre: O Senhor esteja convosco");
+        TRANSFORMAI_EM_VINHO("Povo: Ele está no meio de nós.");
+        TRANSFORMAI_EM_VINHO("\n O padre, então, dá a benção");
+      
+        TRANSFORMAI_EM_VINHO("E, em seguida, a despedida propriamente dita.");
+        TRANSFORMAI_EM_VINHO("Padre: Ide em paz e o Senhor vos acompanhe.");
+        TRANSFORMAI_EM_VINHO("Graças a Deus!");
+
+        TRANSFORMAI_EM_VINHO("Com isso, os cantos finais começam e a missa está propriamente no fim.");
+        TRANSFORMAI_EM_VINHO("Alguns esperam o fim dos cantos, outros não, isso não atraplha a ritualistica.");
+        TRANSFORMAI_EM_VINHO("Independentemente de você esperar ou não, você sai da igreja sabendo que se portou da maneira mair ou menos certa");
+        
+        TRANSFORMAI_EM_VINHO("\n E com isso, se sente abençoado.");
+        TRANSFORMAI_EM_VINHO("Amém, irmão, agora és um cristão um pouco melhor. \n\n");
+
+        TRANSFORMAI_EM_VINHO("Amém, irmão, agora és um cristão um pouco melhor. \n\n");
+        TRANSFORMAI_EM_VINHO("Amém, irmão, agora és um cristão um pouco melhor. \n\n");
+        TRANSFORMAI_EM_VINHO("Amém, irmão, agora és um cristão um pouco melhor. \n\n");
+        TRANSFORMAI_EM_VINHO("Amém, irmão, agora és um cristão um pouco melhor. \n\n");
+        TRANSFORMAI_EM_VINHO("Amém, irmão, agora és um cristão um pouco melhor. \n\n");
+        TRANSFORMAI_EM_VINHO("Amém, irmão, agora és um cristão um pouco melhor. \n\n");
+        TRANSFORMAI_EM_VINHO("Amém, irmão, agora és um cristão um pouco melhor. \n\n");
+        TRANSFORMAI_EM_VINHO("   __________________________");
+        TRANSFORMAI_EM_VINHO("  /\\                         \\");
+        TRANSFORMAI_EM_VINHO(" /  \\            ____         \\");
+        TRANSFORMAI_EM_VINHO("/ \\/ \\          /\\   \\         \\");
+        TRANSFORMAI_EM_VINHO("\\ /\\  \\         \\ \\   \\         \\");
+        TRANSFORMAI_EM_VINHO(" \\  \\  \\     ____\\_\\   \\______   \\");
+        TRANSFORMAI_EM_VINHO("  \\   /\\\\   /\\                \\   \\");
+        TRANSFORMAI_EM_VINHO("   \\ /\\/ \\  \\ \\_______    _____\\   \\");
+        TRANSFORMAI_EM_VINHO("    \\\\/ / \\  \\/______/\\   \\____/    \\");
+        TRANSFORMAI_EM_VINHO("     \\ / /\\\\         \\ \\   \\         \\");
+        TRANSFORMAI_EM_VINHO("      \\ /\\/ \\         \\ \\   \\         \\");
+        TRANSFORMAI_EM_VINHO("       \\\\/ / \\         \\ \\   \\         \\");
+        TRANSFORMAI_EM_VINHO("  May   \\ /   \\         \\ \\   \\         \\");
+        TRANSFORMAI_EM_VINHO("         \\\\  /\\\\         \\ \\   \\         \\");
+        TRANSFORMAI_EM_VINHO("God Bless \\ /\\  \\         \\ \\___\\         \\");
+        TRANSFORMAI_EM_VINHO("           \\\\    \\         \\/___/          \\");
+        TRANSFORMAI_EM_VINHO("  you in    \\  \\/ \\                         \\");
+        TRANSFORMAI_EM_VINHO("             \\ /\\  \\_________________________\\");
+        TRANSFORMAI_EM_VINHO(" all  your    \\  \\ / ______________________  /");
+        TRANSFORMAI_EM_VINHO("               \\  / ______________________  /");
+        TRANSFORMAI_EM_VINHO("Endeavors!!!    \\/_________________________/");
+        TRANSFORMAI_EM_VINHO("                                                  Amém.");
+
+
+     
+
+}

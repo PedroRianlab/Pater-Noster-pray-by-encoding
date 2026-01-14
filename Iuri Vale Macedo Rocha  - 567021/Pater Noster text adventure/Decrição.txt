@@ -1,0 +1,11 @@
+-----------------------------------------------------------------------------------------------------------------------------
+						Descrição
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+	Pater Noster text adventure é um text adventure tradicional que busca ensinar como se portar em uma missa através de uma narrativa simples.
+	A narrativa é sobre um jovem recém convertido indo para a missa após estudar um pouco sobre como uma funciona.
+	Escolhas serão feitas sobre o comportamento dele na missa. 
+	Essa escolhas, no geral, podem ser respondidas de maneira errada sem muitas consequência. 
+	Em erros, a narrativa repetirá a pergunta ou mostrara um pequena diferença narrativa sobre o protagonista confuso.
+	O principal objetivo é mostrar um "roteiro" para missa, não um desafio de múltipla escolha.

@@ -1,0 +1,44 @@
+-----------------------------------------------------------------------------------------------------------------------------
+						INSTRUÇÕES
+-----------------------------------------------------------------------------------------------------------------------------
+
+	1 - Pré-requisitos e execução.
+
+
+	1.1. Instale o python, caso já esteja instalado.
+	O código Pater Noster será convertido em python, assim ele é necessário.
+	Em caso de dúvidas quanto a isso, visite o site oficial:
+	https://www.python.org/downloads/
+
+	Siga os passos 1.2 e 1.3 caso a pasta "Pater-Noster-pray-by-encoding" não tenha vindo com esse programa ou esteja corrompida.
+	Caso contrário, pule para 1.4.
+
+	1.2. Abra um pasta vazia pra a clonagem do repositório do pater-noster-pray-by-enconding.
+	Não necessário, mas reomendado por motivos de organização.
+
+	1.3.Com a pasta aberta, clone o repositório Pater-Noster-Pray-by-encoding disponível em:
+	https://github.com/PedroRianlab/Pater-Noster-pray-by-encoding
+
+	A instalação pode ser feita via terminal ou diretamente pelo site do GitHub.
+	O modo de instalação pode variar a depender do sistema operacional.
+	Instalação via terminal pode também envolver a instalação do Git.
+	Para mais detalhes ou dúvidas sobre a clonagem de um repositório, acesse os docs oficiais:
+	https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository?platform=windows.
+
+	1.4. Mova ou copie o arquivo "Textadventure.pn" para a pasta "Pater-Noster-pray-by-encoding" ou aonde clonou o repositório.
+	Garanta que o arquivo esteja na mesma pasta que o arquivo chamado "sacerdos_translator.py".
+
+	1.5. Abra no terminal a pasta que contenha tanto o "Textadventure.pn" e "sacerdos_translator.py".
+	Execute o comando : python sacerdos_translator.py Textadventure.pn
+	Isso deve gera um arquivo em python com a extensão .py de mesmo nome do arquivo original.
+
+	1.6. Para finalmente executar o programa, com o terminal aberto na pasta do arquivo .py gerado, execute:
+	python Textadventure.pn
+	
+	2 - Modo de uso.
+
+	2.1 - As interações no programa são feitas exclusivamente por entrada numérica.
+	Os números válidos serão apresentado pelo próprio programa ante de você poder inserir a entrada.
+	Números inválidos levarão a repetição a pergunta ou a alternativa da resposta errada.
+
+	O programa deverá encerrar após todas perguntas respondidas e linhas de texto imprimidas.
